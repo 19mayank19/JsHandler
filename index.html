@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSHandler</title>
 </head>
+<script>
+    function callMe() {
+        let text = document.getElementById("myText");
+        let val = text.value;
+        window.handleNativeNavigation && window.handleNativeNavigation(val);
+    }
+</script>
 <body>
-    <button id="myButton">JsBridge</button>
-    <script src="./index.js" ></script>
+    <input type="text" id="myText"></input>
+    <button id="myButton" onclick="callMe()">JsBridge</button>
 </body>
 </html>
